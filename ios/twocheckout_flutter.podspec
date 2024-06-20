@@ -29,12 +29,13 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://example.com'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Author' => 'author@example.com' }
-  s.source           = { :path => '.' }
+  s.source           = { :git => 'https://github.com/ajmalajmalvp/twopodfile', :tag => s.version.to_s }
   s.ios.deployment_target = '11.0'
   s.source_files = 'Classes/**/*'
   s.resource_bundles = {
     'twocheckout_flutter' => ['Assets/*.xcassets']
   }
-  s.resources = ['Assets/*.xcassets/back.pdf']
+  s.resources = ['Assets/*.xcassets/back.pdf'] # Ensure this path is correct
   s.dependency 'Flutter'
 end
+
